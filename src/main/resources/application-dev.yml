@@ -1,0 +1,7 @@
+storage:
+  id: storageManager
+  scan:
+    package: com.hellost.resource
+  resource:
+    location: classpath:/excel
+    suffix: xlsx
