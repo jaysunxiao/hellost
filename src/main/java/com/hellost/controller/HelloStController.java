@@ -30,7 +30,7 @@ public class HelloStController {
     @Autowired
     private StockService stockService;
 
-    @Scheduler(cron = "0 * * * * ?")
+    // @Scheduler(cron = "0 * * * * ?")
     public void cronQuotePM() throws ParseException, IOException, InterruptedException {
         var simpleDateStr = TimeUtils.dateFormatForDayString(TimeUtils.now());
         var startTime = TimeUtils.stringToDate(StringUtils.format("{} 09:30:00", simpleDateStr)).getTime();
@@ -41,7 +41,7 @@ public class HelloStController {
         quote();
     }
 
-    @Scheduler(cron = "0 * * * * ?")
+    // @Scheduler(cron = "0 * * * * ?")
     public void cronQuoteAM() throws ParseException, IOException, InterruptedException {
         var simpleDateStr = TimeUtils.dateFormatForDayString(TimeUtils.now());
         var startTime = TimeUtils.stringToDate(StringUtils.format("{} 13:00:00", simpleDateStr)).getTime();
@@ -52,7 +52,7 @@ public class HelloStController {
         quote();
     }
 
-    @Scheduler(cron = "0/10 * * * * ?")
+    @Scheduler(cron = "0/30 * * * * ?")
     public void cronTest() throws ParseException, IOException, InterruptedException {
         quote();
     }
