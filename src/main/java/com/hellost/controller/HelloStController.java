@@ -35,7 +35,7 @@ public class HelloStController {
         var simpleDateStr = TimeUtils.dateFormatForDayString(TimeUtils.now());
         var startTime = TimeUtils.stringToDate(StringUtils.format("{} 09:30:00", simpleDateStr)).getTime();
         var endTime = TimeUtils.stringToDate(StringUtils.format("{} 11:30:00", simpleDateStr)).getTime();
-        if (!TimeUtils.timeIn(TimeUtils.now(), startTime, endTime)) {
+        if (!TimeUtils.timeBetween(TimeUtils.now(), startTime, endTime)) {
             return;
         }
         quote();
@@ -46,7 +46,7 @@ public class HelloStController {
         var simpleDateStr = TimeUtils.dateFormatForDayString(TimeUtils.now());
         var startTime = TimeUtils.stringToDate(StringUtils.format("{} 13:00:00", simpleDateStr)).getTime();
         var endTime = TimeUtils.stringToDate(StringUtils.format("{} 15:00:00", simpleDateStr)).getTime();
-        if (!TimeUtils.timeIn(TimeUtils.now(), startTime, endTime)) {
+        if (!TimeUtils.timeBetween(TimeUtils.now(), startTime, endTime)) {
             return;
         }
         quote();
