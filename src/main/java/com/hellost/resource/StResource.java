@@ -4,7 +4,7 @@ import com.zfoo.storage.model.anno.Id;
 import com.zfoo.storage.model.anno.Resource;
 
 @Resource
-public class StockResource {
+public class StResource {
 
     @Id
     private String code;

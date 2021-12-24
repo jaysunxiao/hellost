@@ -1,7 +1,7 @@
 package com.hellost.controller;
 
 
-import com.hellost.resource.StockResource;
+import com.hellost.resource.StResource;
 import com.hellost.service.QuoteService;
 import com.hellost.service.StockService;
 import com.zfoo.protocol.util.StringUtils;
@@ -23,7 +23,7 @@ public class HelloStController {
     private static final Logger logger = LoggerFactory.getLogger(HelloStController.class);
 
     @ResInjection
-    private Storage<String, StockResource> stockResources;
+    private Storage<String, StResource> stockResources;
 
     @Autowired
     private QuoteService quoteService;
